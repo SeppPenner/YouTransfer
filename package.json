@@ -16,7 +16,9 @@
     "start": "gulp clean && gulp dist && node app.js",
     "dockerized": "node ./bin/youtransfer dockerize && npm start",
     "app": "node app.js",
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "Apache-2.0",
   "repository": {
@@ -44,7 +46,7 @@
     "jquery": "^3.2.1",
     "jquery-form": "^4.2.2",
     "jwt-simple": "^0.5.1",
-    "karma": "^2.0.0",
+    "karma": "^3.0.0",
     "lodash": "^4.17.12",
     "mime": "^2.0.3",
     "nconf": "^0.8.5",
@@ -63,7 +65,8 @@
     "restify-cookies": "^0.2.2",
     "url": "^0.11.0",
     "uuid": "^3.1.0",
-    "validator": "^9.1.1"
+    "validator": "^9.1.1",
+    "snyk": "^1.192.6"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -103,5 +106,6 @@
     "wdio-spec-reporter": "^0.1.2",
     "webdriverio": "^4.1.1"
   },
-  "bin": "./bin/youtransfer"
+  "bin": "./bin/youtransfer",
+  "snyk": true
 }
